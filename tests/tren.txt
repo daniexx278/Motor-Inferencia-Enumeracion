@@ -1,0 +1,9 @@
+# Pruebas automáticas del ejemplo del tren
+
+# Ejemplo 1: Probabilidad de fallar a la reunión con lluvia ligera, sin mantenimiento y tren retrasado
+QUERY Appointment
+EVIDENCE Rain=light,Maintenance=no,Train=delayed
+
+# Ejemplo 2: Probabilidad de llegar a la reunión con lluvia fuerte, con mantenimiento y tren retrasado
+QUERY Appointment
+EVIDENCE Rain=heavy,Maintenance=yes,Train=delayed

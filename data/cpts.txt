@@ -1,0 +1,43 @@
+Node: Rain
+Values: none,light,heavy
+CPT:
+none 0.7
+light 0.2
+heavy 0.1
+
+Node: Maintenance
+Parents: Rain
+Values: yes,no
+CPT:
+Rain=none yes 0.4
+Rain=none no  0.6
+Rain=light yes 0.2
+Rain=light no  0.8
+Rain=heavy yes 0.1
+Rain=heavy no  0.9
+
+Node: Train
+Parents: Rain,Maintenance
+Values: on_time,delayed
+CPT:
+Rain=none Maintenance=yes  on_time 0.8
+Rain=none Maintenance=yes  delayed 0.2
+Rain=none Maintenance=no   on_time 0.9
+Rain=none Maintenance=no   delayed 0.1
+Rain=light Maintenance=yes on_time 0.6
+Rain=light Maintenance=yes delayed 0.4
+Rain=light Maintenance=no  on_time 0.7
+Rain=light Maintenance=no  delayed 0.3
+Rain=heavy Maintenance=yes on_time 0.4
+Rain=heavy Maintenance=yes delayed 0.6
+Rain=heavy Maintenance=no  on_time 0.5
+Rain=heavy Maintenance=no  delayed 0.5
+
+Node: Appointment
+Parents: Train
+Values: attend,miss
+CPT:
+Train=on_time  attend 0.9
+Train=on_time  miss   0.1
+Train=delayed  attend 0.6
+Train=delayed  miss   0.4
