@@ -1,0 +1,16 @@
+# Ignorar cachés y archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar configuraciones de VS Code
+.vscode/
+
+# Ignorar archivos de entorno o logs
+*.log
+*.env
+
+# Ignorar resultados generados o salidas
+output/
+resultados/
