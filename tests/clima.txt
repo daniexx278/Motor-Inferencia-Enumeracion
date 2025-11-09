@@ -1,0 +1,10 @@
+# Archivo de pruebas automáticas para el ejemplo Clima-Riego
+
+QUERY CespedHumedo
+EVIDENCE Clima=soleado, Riego=encendido
+
+QUERY Riego
+EVIDENCE Clima=lluvioso
+
+QUERY Clima
+EVIDENCE CespedHumedo=si

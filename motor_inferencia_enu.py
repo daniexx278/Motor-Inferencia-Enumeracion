@@ -1,6 +1,3 @@
-# motor_inferencia_enu.py
-# Versión corregida: evita duplicados en padres/hijos y asegura el orden de padres según CPT.
-
 import itertools
 
 # ==========================================
