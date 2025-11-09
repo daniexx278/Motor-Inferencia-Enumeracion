@@ -30,28 +30,28 @@ Este proyecto implementa un <span style="color: #FF6B6B; font-weight: bold;">Mot
 <tr>
 <td align="center" width="25%">
   
-  ** Constructor de Redes**
+  **Constructor de Redes**
   <br>
   <span style="font-size: 0.8em;">Crea redes complejas fácilmente</span>
   
 </td>
 <td align="center" width="25%">
   
-  ** Analizador CPT**
+  **Analizador CPT**
   <br>
   <span style="font-size: 0.8em;">Tablas de probabilidad inteligentes</span>
   
 </td>
 <td align="center" width="25%">
   
-  ** Motor de Inferencia**
+  **Motor de Inferencia**
   <br>
   <span style="font-size: 0.8em;">Algoritmos de última generación</span>
   
 </td>
 <td align="center" width="25%">
   
-  ** Interfaz Interactiva**
+  **Interfaz Interactiva**
   <br>
   <span style="font-size: 0.8em;">Experiencia de usuario fluida</span>
   
