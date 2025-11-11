@@ -8,7 +8,7 @@ class Node:
     def __init__(self, name, values):
         self.name = name
         self.values = [v.strip() for v in values.split(",")] if values else []
-        self.parents = []            # lista de nombres de padres (orden usada para construir claves CPT)
+        self.parents = []           # lista de nombres de padres (orden usada para construir claves CPT)
         self.children = []          # lista de nombres de hijos
         self.cpt = {}               # diccionario: clave=(parent_condition_string, value) -> prob
         self.expected_parents = []  # listado de padres según el bloque CPT (mantiene orden deseado)
@@ -112,7 +112,6 @@ def leer_estructura(path):
 def leer_cpts(path):
     """
     Lee el archivo cpts.txt y devuelve un dict nombre->Node (con CPT cargada y expected_parents).
-    NOTA: no setea aún node.parents porque queremos conservar el orden definido en 'Parents:'.
     """
     nodos = {}
     with open(path, "r", encoding="utf-8") as f:
