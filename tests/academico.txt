@@ -1,0 +1,5 @@
+# Caso de prueba: desempeño académico
+# Consulta: Probabilidad de buen desempeño dado que consumió cafeína y tuvo carga baja.
+
+QUERY D
+EVIDENCE A=Baja, C=Si

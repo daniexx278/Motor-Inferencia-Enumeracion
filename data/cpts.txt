@@ -1,43 +1,35 @@
-Node: Rain
-Values: none,light,heavy
+Node: A
+Values: Alta,Baja
 CPT:
-none 0.7
-light 0.2
-heavy 0.1
+Alta 0.6
+Baja 0.4
 
-Node: Maintenance
-Parents: Rain
-Values: yes,no
-CPT:
-Rain=none yes 0.4
-Rain=none no  0.6
-Rain=light yes 0.2
-Rain=light no  0.8
-Rain=heavy yes 0.1
-Rain=heavy no  0.9
 
-Node: Train
-Parents: Rain,Maintenance
-Values: on_time,delayed
+Node: C
+Parents: A
+Values: Si,No
 CPT:
-Rain=none Maintenance=yes  on_time 0.8
-Rain=none Maintenance=yes  delayed 0.2
-Rain=none Maintenance=no   on_time 0.9
-Rain=none Maintenance=no   delayed 0.1
-Rain=light Maintenance=yes on_time 0.6
-Rain=light Maintenance=yes delayed 0.4
-Rain=light Maintenance=no  on_time 0.7
-Rain=light Maintenance=no  delayed 0.3
-Rain=heavy Maintenance=yes on_time 0.4
-Rain=heavy Maintenance=yes delayed 0.6
-Rain=heavy Maintenance=no  on_time 0.5
-Rain=heavy Maintenance=no  delayed 0.5
+A=Alta Si 0.8
+A=Alta No 0.2
+A=Baja Si 0.3
+A=Baja No 0.7
 
-Node: Appointment
-Parents: Train
-Values: attend,miss
+
+Node: S
+Parents: C
+Values: Mal,Bien
 CPT:
-Train=on_time  attend 0.9
-Train=on_time  miss   0.1
-Train=delayed  attend 0.6
-Train=delayed  miss   0.4
+C=Si Mal 0.9
+C=Si Bien 0.1
+C=No Mal 0.2
+C=No Bien 0.8
+
+
+Node: D
+Parents: S
+Values: Malo,Bueno
+CPT:
+S=Mal Malo 0.85
+S=Mal Bueno 0.15
+S=Bien Malo 0.10
+S=Bien Bueno 0.90
